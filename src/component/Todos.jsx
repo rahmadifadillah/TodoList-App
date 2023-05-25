@@ -8,7 +8,13 @@ const mapStateToProps = (state) => {
   };
 };
 
-const Todo = (props) => {
+const mapDispatchToProps = (dispatch) => {
+  return {
+    addTodo: (obj) => dispatch(addTodos(obj)),
+  };
+};
+
+const Todos = (props) => {
   const [todo, setTodo] = useState("");
 
   const handleChange = (e) => {
@@ -45,4 +51,5 @@ const Todo = (props) => {
   );
 };
 
-export default Todos;
+// Menghubungkan komponen dengan method connect ke dalam redux store
+export default connect(mapStateToProps, mapDispatchToProps)(Todos);
