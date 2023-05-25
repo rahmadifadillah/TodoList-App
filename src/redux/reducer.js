@@ -5,22 +5,22 @@ import {
 const initialState = [];
 
 const addTodoReducer = createSlice({
-    name: "todo",
+    name: "todos",
     initialState,
     reducers: {
-        // Tempat menuliskan reducer kita
-        // Adding todos
+        //Tempat menuliskan reducer kita
+        //Adding todos
         addTodos: (state, action) => {
             state.push(action.payload);
             return state;
         },
 
-        // Remove todo 
+        //Remove todos
         removeTodos: (state, action) => {
             return state.filter((item) => item.id !== action.payload);
         },
 
-        // Update Todo 
+        // Update todos
         updateTodos: (state, action) => {
             return state.map(todo => {
                 if (todo.id === action.payload.id) {
@@ -28,18 +28,30 @@ const addTodoReducer = createSlice({
                         ...todo,
                         item: action.payload.item,
                     }
-                    return todo;
                 }
-            })
-        }
-    }
+                return todo;
+            });
+        },
 
+        // Completed 
+        completeTodos: (state, action) => {
+            return state.map(todo => {
+                if (todo.id === action.payload) {
+                    return {
+                        ...todo,
+                        completed: true,
+                    }
+                }
+                return todo;
+            });
+        },
+    },
 })
 
 export const {
     addTodos,
     removeTodos,
-    updateTodos
-} = addTodoReducer.action;
-
+    updateTodos,
+    completeTodos
+} = addTodoReducer.actions;
 export const reducer = addTodoReducer.reducer;
