@@ -1,11 +1,14 @@
-import React from "react";
-import Todos from "./component/Todos";
-import DisplayTodos from "./component/DisplayTodos";
 import "./css/main.css";
+import { Helmet } from "react-helmet";
+import DisplayTodos from "./component/DisplayTodos";
+import Todos from "./component/Todos";
 
 function App() {
   return (
     <div className="App">
+      <Helmet>
+        <title>To-do List App</title>
+      </Helmet>
       <h1>&diams; Todo Apps &diams;</h1>
       <h2>What's the plan for today?</h2>
       <div>
