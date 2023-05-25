@@ -19,7 +19,7 @@ const addTodoReducer = createSlice({
 })
 
 export const {
-    addTodos,
+    addTodos
 } = addTodoReducer.action;
 
 export const reducer = addTodoReducer.reducer;
