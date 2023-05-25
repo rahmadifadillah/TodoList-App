@@ -56,8 +56,8 @@ The project structure is organized as follows:
   - The `redux` folder contains the Redux file.
     - The `reducers.js` folder contains the Redux reducers.
     - The `store.js` file sets up the Redux store.
-  - The `App.js` file is the root component of the application.
-  - The `index.js` file is the entry point of the application.
+- The `App.js` file is the root component of the application.
+- The `index.js` file is the entry point of the application.
 
 ## Technologies Used
 
@@ -69,7 +69,3 @@ The project structure is organized as follows:
 ## Contributing
 
 Contributions are welcome! If you find any issues or have suggestions for improvement, please create an issue or submit a pull request.
-
-## License
-
-This project is licensed under the [MIT License](https://opensource.org/licenses/MIT).
