@@ -1,5 +1,6 @@
 import React from "react";
 import Todos from "./component/Todos";
+import DisplayTodos from "./component/DisplayTodos";
 
 function App() {
   return (
@@ -8,6 +9,7 @@ function App() {
       <h2>What's the plan for today?</h2>
       <div>
         <Todos />
+        <DisplayTodos />
       </div>
     </div>
   );
