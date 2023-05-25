@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { connect } from "react-redux";
 import { addTodos } from "../redux/reducer";
+import { IoAddCircle } from "react-icons/io5";
 
 const mapStateToProps = (state) => {
   return {
@@ -33,7 +34,7 @@ const Todos = (props) => {
       setTodo("");
     }
   };
-  //console.log("props from store", props);
+  // console.log("props from store", props);
   return (
     <div className="addTodos">
       <input
@@ -44,7 +45,7 @@ const Todos = (props) => {
         placeholder="What to do..."
       />
       <button className="add-btn" onClick={() => add()}>
-        Add
+        Add <IoAddCircle />
       </button>{" "}
       <br />
     </div>
