@@ -9,7 +9,7 @@ function App() {
       <Helmet>
         <title>To-do List App</title>
       </Helmet>
-      <h1>&diams; Todo Apps &diams;</h1>
+      <h1>&diams; To-do List Apps &diams;</h1>
       <h2>What's the plan for today?</h2>
       <div>
         <Todos />
