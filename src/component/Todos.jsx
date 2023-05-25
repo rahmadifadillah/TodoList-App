@@ -26,15 +26,14 @@ const Todos = (props) => {
       alert("Input is Empty");
     } else {
       props.addTodo({
-        id: Math.floor(Math.random() * 100),
+        id: Math.floor(Math.random() * 1000),
         item: todo,
         completed: false,
       });
       setTodo("");
     }
   };
-  console.log("props from store", props);
-
+  //console.log("props from store", props);
   return (
     <div className="addTodos">
       <input
@@ -47,9 +46,9 @@ const Todos = (props) => {
       <button className="add-btn" onClick={() => add()}>
         Add
       </button>{" "}
+      <br />
     </div>
   );
 };
-
-// Menghubungkan komponen dengan method connect ke dalam redux store
+// Mengkoneksikan component dengan redux store dengan method connect
 export default connect(mapStateToProps, mapDispatchToProps)(Todos);
