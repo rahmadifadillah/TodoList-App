@@ -1,6 +1,7 @@
 import React from "react";
 import Todos from "./component/Todos";
 import DisplayTodos from "./component/DisplayTodos";
+import "./css/main.css";
 
 function App() {
   return (
