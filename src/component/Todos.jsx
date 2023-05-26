@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { connect } from "react-redux";
 import { addTodos } from "../redux/reducer";
 import { IoAddCircle } from "react-icons/io5";
+import { toast } from "react-toastify";
 
 const mapStateToProps = (state) => {
   return {
@@ -24,7 +25,15 @@ const Todos = (props) => {
 
   const add = () => {
     if (todo === "") {
-      alert("Input is Empty");
+      toast.warn("Input is Empty", {
+        position: "top-center",
+        autoClose: 2000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+      });
     } else {
       props.addTodo({
         id: Math.floor(Math.random() * 1000),
@@ -32,6 +41,16 @@ const Todos = (props) => {
         completed: false,
       });
       setTodo("");
+      toast.success("Input Data Success", {
+        position: "bottom-center",
+        autoClose: 2000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+      });
     }
   };
   // console.log("props from store", props);
